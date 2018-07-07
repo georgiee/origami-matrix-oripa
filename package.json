@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --mode development --",
-    "build": "NODE_ENV=production webpack --mode production"
+    "build": "NODE_ENV=production webpack --mode production",
+    "ormat": "ts-node load-ormat.ts"
   },
   "license": "ISC",
   "devDependencies": {
+    "@types/fs-extra": "^5.0.4",
+    "@types/node": "^10.3.5",
+    "fs-extra": "^6.0.1",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "ts-loader": "^4.4.1",
+    "ts-node": "^7.0.0",
     "typescript": "^2.9.2",
     "webpack": "^4.12.1",
     "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4",
-    "@types/node": "^10.3.5",
-    "html-loader": "^0.5.5"
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
     "@types/three": "^0.92.11",

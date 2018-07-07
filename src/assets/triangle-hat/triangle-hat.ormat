@@ -1,0 +1,30 @@
+# Created by ORIPA
+#
+# v (x) (y) (x: folded) (y: folded)
+# f (index list of contour vertices. Index number starts from 1.)
+
+v -200.0 -200.0 -200.0 -200.0
+v 200.0 -200.0 -200.00000000000165 199.9999999999984
+v 200.0 200.0 -200.00000000000168 199.9999999999992
+v -200.0 200.0 -200.00000000000333 -199.99999999999915
+v -200.0 0.0 -200.0 0.0
+v 0.0 0.0 -4.916955731459893E-12 -7.958078640513122E-13
+v 200.0 0.0 -200.00000000000247 -7.958078640513122E-13
+f 1 6 5
+f 2 6 1
+f 3 6 7
+f 4 6 3
+f 5 6 4
+f 6 2 7
+# overlap relation matrix
+# 0: NO_OVERLAP
+# 1: face[row_index] located LOWER than face[col_index]
+# 2: face[row_index] located UPPER than face[col_index]
+# 9: UNDEFINED (not used)
+# matrix size (face num) =6
+0 1 0 2 2 0 
+2 0 2 2 2 2 
+0 1 0 2 0 1 
+1 1 1 0 1 1 
+1 1 0 2 0 0 
+0 1 2 2 0 0 
