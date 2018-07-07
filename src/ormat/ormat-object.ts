@@ -1,6 +1,9 @@
 import { OrmatFile } from './ormat-file';
-import { Object3D, Geometry, Vector3, Face3 } from 'three';
+import { Object3D, Geometry, Vector3, Face3, ShaderMaterial, DoubleSide } from 'three';
 import { Scene, SphereGeometry, Mesh, MeshNormalMaterial } from 'three';
+
+import fragmentShader from './shaders/simple-material.fs';
+import vertexShader from './shaders/simple-material.vs';
 
 export class OrmatObject extends Object3D {
   constructor(public file: OrmatFile) {
@@ -38,7 +41,12 @@ export class OrmatObject extends Object3D {
     geometry.faces = faces;
     geometry.computeFaceNormals();
 
-    const material = new MeshNormalMaterial( );
+    // const material = new MeshNormalMaterial( );
+    const material = new ShaderMaterial( {
+      vertexShader: (vertexShader as any),
+      fragmentShader: (fragmentShader as any),
+      side: DoubleSide
+    } );
     const ormatObject = new Mesh( geometry, material );
 
     this.add(ormatObject);

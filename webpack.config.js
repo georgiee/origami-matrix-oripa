@@ -28,6 +28,15 @@ module.exports = {
       {
         test: /\.(html)$/,
         loader: 'html-loader?interpolate'
+      },
+      {
+        test: /\.(glsl|vs|fs)$/,
+        loader: 'shader-loader',
+        options: {
+          glsl: {
+            chunkPath: path.resolve("/glsl/chunks")
+          }
+        }
       }
     ]
   },
