@@ -4,12 +4,13 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --",
     "build": "NODE_ENV=production webpack --mode production",
-    "ormat": "ts-node load-ormat.ts"
+    "playground": "ts-node playground.ts"
   },
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^5.0.4",
     "@types/node": "^10.3.5",
+    "copy-webpack-plugin": "^4.5.2",
     "fs-extra": "^6.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
@@ -21,7 +22,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "@types/three": "^0.92.11",
+    "@types/three": "^0.92.12",
     "rxjs": "^6.2.1",
     "three": "^0.94.0",
     "three-orbit-controls": "^82.1.0",

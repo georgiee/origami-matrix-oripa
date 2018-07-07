@@ -1,4 +1,5 @@
 const devMode = process.env.NODE_ENV !== 'production'
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -33,7 +34,10 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: 'index.html'
-    })
+    }),
+    new CopyWebpackPlugin([
+      {from:'src/assets',to:'assets'}
+    ])
   ],
   stats: 'normal'
 };
